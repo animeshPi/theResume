@@ -44,10 +44,7 @@ export const FeaturesSection = () => {
 
   const features: Feature[] = [
     { icon: <CurrencyDollarSimple />, title: t`Free, forever` },
-    { icon: <GitBranch />, title: t`Open Source` },
-    { icon: <Scales />, title: t`MIT License` },
     { icon: <Prohibit />, title: t`No user tracking or advertising` },
-    { icon: <Cloud />, title: t`Self-host with Docker` },
     { icon: <Translate />, title: t`Available in ${languagesCount} languages` },
     { icon: <Brain />, title: t`OpenAI Integration` },
     { icon: <GithubLogo />, title: t`Sign in with GitHub` },
@@ -67,35 +64,6 @@ export const FeaturesSection = () => {
     { icon: <GoogleChromeLogo />, title: t`Host your resume publicly` },
     { icon: <Eye />, title: t`Track views and downloads` },
     { icon: <CloudSun />, title: t`Light or dark theme` },
-    {
-      icon: (
-        <div className="flex items-center space-x-1">
-          <img src="https://cdn.simpleicons.org/react" alt="React" width={14} height={14} />
-          <img src="https://cdn.simpleicons.org/vite" alt="Vite" width={14} height={14} />
-          <img
-            src="https://cdn.simpleicons.org/tailwindcss"
-            alt="TailwindCSS"
-            width={14}
-            height={14}
-          />
-          <img src="https://cdn.simpleicons.org/nestjs" alt="NestJS" width={14} height={14} />
-          <img
-            src="https://cdn.simpleicons.org/googlechrome"
-            alt="Google Chrome"
-            width={14}
-            height={14}
-          />
-          <img
-            src="https://cdn.simpleicons.org/postgresql"
-            alt="PostgreSQL"
-            width={14}
-            height={14}
-          />
-        </div>
-      ),
-      title: t`Powered by`,
-      className: "flex-row-reverse",
-    },
   ];
 
   return (
@@ -104,7 +72,7 @@ export const FeaturesSection = () => {
         <div className="space-y-6 leading-loose">
           <h2 className="text-4xl font-bold">{t`Rich in features, not in pricing.`}</h2>
           <p className="max-w-4xl text-base leading-relaxed">
-            {t`Reactive Resume is a passion project of over 3 years of hard work, and with that comes a number of re-iterated ideas and features that have been built to (near) perfection.`}
+            {t`theResume is a passion project born from over one year of dedicated effort, resulting in a series of refined ideas and features that have been honed for (near) perfection.`}
           </p>
 
           <IconContext.Provider value={{ size: 14, weight: "bold" }}>
@@ -121,18 +89,6 @@ export const FeaturesSection = () => {
                   <h4>{feature.title}</h4>
                 </motion.div>
               ))}
-
-              <motion.p
-                viewport={{ once: true }}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { delay: (features.length + 1) * 0.1 },
-                }}
-              >
-                {t`and many more...`}
-              </motion.p>
             </div>
           </IconContext.Provider>
         </div>

@@ -19,27 +19,16 @@ const DonateCard = () => (
       <CardDescription className="space-y-2">
         <Trans>
           <p>
-            I built Reactive Resume mostly by myself during my spare time, with a lot of help from
-            other great open-source contributors.
+          ChatGPT
+
+We built theResume as a team when we encountered difficulties finding free resume-building tools. Our goal was to create an easy-to-use platform to help you craft the perfect resume effortlessly. 
           </p>
           <p>
-            If you like the app and want to support keeping it free forever, please donate whatever
-            you can afford to give.
+          We hope you find it as valuable as we did in addressing our own resume-building challenges. Your success is our motivation.
           </p>
         </Trans>
       </CardDescription>
     </CardContent>
-    <CardFooter>
-      <a
-        href="https://opencollective.com/reactive-resume"
-        className={cn(buttonVariants({ size: "sm" }))}
-        rel="noopener noreferrer nofollow"
-        target="_blank"
-      >
-        <HandHeart size={14} weight="bold" className="mr-2" />
-        <span className="line-clamp-1">{t`Donate to Reactive Resume`}</span>
-      </a>
-    </CardFooter>
   </Card>
 );
 
@@ -49,29 +38,18 @@ const IssuesCard = () => (
       <CardTitle>{t`Found a bug, or have an idea for a new feature?`}</CardTitle>
       <CardDescription className="space-y-2">
         <Trans>
-          <p>I'm sure the app is not perfect, but I'd like for it to be.</p>
+          <p>We strive for perfection with theResume, but we know there's always room for improvement.</p>
           <p>
-            If you faced any issues while creating your resume, or have an idea that would help you
-            and other users in creating your resume more easily, drop an issue on the repository or
-            send me an email about it.
+          If you encounter any issues while creating your resume or have ideas to enhance the platform, please let us know. Your feedback is invaluable. Feel free to send us an email with your suggestions or concerns.
           </p>
         </Trans>
       </CardDescription>
     </CardContent>
     <CardFooter className="space-x-4">
-      <a
-        href="https://github.com/AmruthPillai/Reactive-Resume/issues/new/choose"
-        className={cn(buttonVariants({ size: "sm" }))}
-        rel="noopener noreferrer nofollow"
-        target="_blank"
-      >
-        <GithubLogo size={14} weight="bold" className="mr-2" />
-        <span className="line-clamp-1">{t`Raise an issue`}</span>
-      </a>
 
-      <a className={cn(buttonVariants({ size: "sm" }))} href="mailto:hello@amruthpillai.com">
+      <a className={cn(buttonVariants({ size: "sm" }))} href="mailto:hello@theresume.us">
         <EnvelopeSimpleOpen size={14} weight="bold" className="mr-2" />
-        <span className="line-clamp-1">{t`Send me a message`}</span>
+        <span className="line-clamp-1">{t`Send us a message`}</span>
       </a>
     </CardFooter>
   </Card>
@@ -84,8 +62,7 @@ const DocumentationCard = () => (
       <CardDescription className="space-y-2">
         <Trans>
           <p>
-            The community has spent a lot of time writing the documentation for Reactive Resume, and
-            I'm sure it will help you get started with the app.
+          Our team has dedicated significant time to creating comprehensive documentation for theResume. We're confident it will help you get started with the app smoothly.
           </p>
           <p>
             There are also a lot of examples to help you get started, and features that you might

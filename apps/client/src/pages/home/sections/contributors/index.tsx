@@ -17,9 +17,9 @@ export const ContributorsSection = () => {
   return (
     <section id="contributors" className="container relative space-y-12 py-24 sm:py-32">
       <div className="space-y-6 text-center">
-        <h1 className="text-4xl font-bold">{t`By the community, for the community.`}</h1>
+        <h1 className="text-4xl font-bold">{t`Designed with you in mind.`}</h1>
         <p className="mx-auto max-w-3xl leading-loose">
-          {t`Reactive Resume thrives thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills. Below, we celebrate the coders who've enhanced its features on GitHub and the linguists whose translations on Crowdin have made it accessible to a broader audience.`}
+          {t`theResume thrives thanks to the dedication of numerous individuals. This project owes its progress to those who've devoted their time and skills.`}
         </p>
       </div>
 
@@ -41,27 +41,6 @@ export const ContributorsSection = () => {
             ))}
         </div>
       )}
-
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-3">
-        {contributors.map((contributor, index) => (
-          <motion.div
-            key={index}
-            viewport={{ once: true }}
-            initial={{ opacity: 0, scale: 0 }}
-            className={cn(index >= 30 && "hidden lg:block")}
-            whileInView={{ opacity: 1, scale: 1, transition: { delay: index * 0.025 } }}
-          >
-            <a href={contributor.url} target="_blank" rel="noreferrer">
-              <Tooltip content={contributor.name}>
-                <Avatar>
-                  <AvatarImage src={contributor.avatar} alt={contributor.name} />
-                  <AvatarFallback>{contributor.name}</AvatarFallback>
-                </Avatar>
-              </Tooltip>
-            </a>
-          </motion.div>
-        ))}
-      </div>
     </section>
   );
 };

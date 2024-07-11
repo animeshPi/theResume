@@ -9,9 +9,9 @@ type Statistic = {
 
 export const StatisticsSection = () => {
   const stats: Statistic[] = [
-    { name: t`GitHub Stars`, value: 19_500 },
-    { name: t`Users Signed Up`, value: 500_000 },
-    { name: t`Resumes Generated`, value: 700_000 },
+    { name: t`Rating`, value: 4.1 },
+    { name: t`Users Signed Up`, value: 531 },
+    { name: t`Resumes Generated`, value: 674 },
   ];
 
   return (
@@ -22,7 +22,7 @@ export const StatisticsSection = () => {
             <div key={index} className="mx-auto flex max-w-xs flex-col gap-y-3">
               <dt className="text-base leading-7 opacity-60">{stat.name}</dt>
               <dd className="order-first text-3xl font-semibold tracking-tight sm:text-5xl">
-                <Counter from={0} to={stat.value} />+
+                <Counter from={0} to={stat.value} />
               </dd>
             </div>
           ))}
